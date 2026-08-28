@@ -8,5 +8,6 @@ Arguments:
   <NAME>  Name to greet
 
 Options:
-      -n <N>  Number of greetings
+      --number <N>  Number of greetings
+      --loud  Shout the greeting loudly
   -h, --help        Print help
