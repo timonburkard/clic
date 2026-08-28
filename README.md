@@ -44,6 +44,13 @@ static const clic_arg_t arguments[] = {
         .value_name  = "N",
         .description = "Number of greetings",
     },
+    [ARG_ID_LOUD] = {
+        .type        = CLIC_ARG_FLAG,
+        .required    = false,
+        .names       = loud_names,
+        .value_name  = NULL,
+        .description = "Shout the greeting loudly",
+    },
 };
 
 static const clic_cmd_t commands[] = {
@@ -60,13 +67,6 @@ static const clic_cmd_t commands[] = {
         .function    = bye,
         .argc        = (uint8_t)(sizeof(arguments) / sizeof(arguments[0])),
         .argv        = arguments,
-    },
-    [ARG_ID_LOUD] = {
-        .type        = CLIC_ARG_FLAG,
-        .required    = false,
-        .names       = loud_names,
-        .value_name  = NULL,
-        .description = "Shout the greeting loudly",
     },
 };
 
