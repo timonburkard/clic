@@ -5,17 +5,23 @@ project(clic
     LANGUAGES C
 )
 
-add_executable(clic
+add_executable(greet
     src/clic.c
     test/greet.c
 )
 
-target_include_directories(clic
+target_include_directories(greet
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
-target_compile_options(clic PRIVATE
+target_compile_definitions(greet PRIVATE
+    "CLIC_NAME=\"greet\""
+    "CLIC_DESCRIPTION=\"Simple program to greet someone\""
+    "CLIC_VERSION=\"v1.0.0\""
+)
+
+target_compile_options(greet PRIVATE
     -Wall
     -Wextra
     -Wshadow
@@ -24,6 +30,12 @@ target_compile_options(clic PRIVATE
     -Werror
 )
 
-set_target_properties(clic PROPERTIES
+set_target_properties(greet PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}
 )
+
+include(CTest)
+
+if(BUILD_TESTING)
+    add_subdirectory(test)
+endif()

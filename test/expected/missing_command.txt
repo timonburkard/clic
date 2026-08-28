@@ -1,0 +1,13 @@
+Error, this is how to use:
+
+Simple program to greet someone
+
+Usage: greet <COMMAND>
+
+Commands:
+  hello     Say hello
+  bye     Say goodbye
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version

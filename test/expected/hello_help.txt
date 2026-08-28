@@ -1,0 +1,10 @@
+Say hello
+
+Usage: greet hello <NAME> [OPTIONS]
+
+Arguments:
+  <NAME>  Name to greet
+
+Options:
+      -n <N>  Number of greetings
+  -h, --help        Print help

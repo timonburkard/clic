@@ -1,0 +1,10 @@
+Say goodbye
+
+Usage: greet bye <NAME> [OPTIONS]
+
+Arguments:
+  <NAME>  Name to greet
+
+Options:
+      -n <N>  Number of greetings
+  -h, --help        Print help
