@@ -19,19 +19,24 @@ An application defines commands and their arguments. Name arrays must end with `
 ### Example
 
 ```c
+enum {
+    ARG_ID_NAME = 0,
+    ARG_ID_NUMBER,
+};
+
 static const char* const cmd_hello_names[]  = {"hello", NULL};
 static const char* const cmd_bye_names[]    = {"bye", NULL};
 static const char* const arg_number_names[] = {"-n", "--number", NULL};
 
 static const clic_arg_t arguments[] = {
-    {
+    [ARG_ID_NAME] = {
         .type        = CLIC_ARG_POSITIONAL,
         .required    = true,
         .names       = NULL,
         .value_name  = "NAME",
         .description = "Name to greet",
     },
-    {
+    [ARG_ID_NUMBER] = {
         .type        = CLIC_ARG_WITH_VALUE,
         .required    = false,
         .names       = arg_number_names,
