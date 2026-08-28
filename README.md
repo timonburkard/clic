@@ -1,4 +1,4 @@
-# `>_` clic
+# `>_` CLIC
 
 CLIC is a small command-line interface parser for C. Applications describe their commands and arguments with static data, then pass that configuration to `clic_parse()`.
 
@@ -70,7 +70,8 @@ int main(int argc, char** argv)
 
 The callback function receives a `clic_res_t`. Its `argv` entries use the same indices as the configured argument array. An entry is `NULL` when its optional argument was not provided.
 
-See [`test/greet.c`](test/greet.c) for a complete application using two commands.
+- See [`test/greet.c`](test/greet.c) for an example application using two commands.
+- See [todo.c](https://github.com/timonburkard/todo.c) for a real application using multiple commands.
 
 #### Help
 
