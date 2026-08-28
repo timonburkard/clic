@@ -27,6 +27,7 @@ enum {
 static const char* const cmd_hello_names[]  = {"hello", NULL};
 static const char* const cmd_bye_names[]    = {"bye", NULL};
 static const char* const arg_number_names[] = {"-n", "--number", NULL};
+static const char* const loud_names[]       = {"-l", "--loud", NULL};
 
 static const clic_arg_t arguments[] = {
     [ARG_ID_NAME] = {
@@ -59,6 +60,13 @@ static const clic_cmd_t commands[] = {
         .function    = bye,
         .argc        = (uint8_t)(sizeof(arguments) / sizeof(arguments[0])),
         .argv        = arguments,
+    },
+    [ARG_ID_LOUD] = {
+        .type        = CLIC_ARG_FLAG,
+        .required    = false,
+        .names       = loud_names,
+        .value_name  = NULL,
+        .description = "Shout the greeting loudly",
     },
 };
 
@@ -109,8 +117,9 @@ Arguments:
   <NAME>  Name to greet
 
 Options:
-  -n <N>      Number of greetings
-  -h, --help  Print help
+  -n, --number <N>  Number of greetings
+  -l, --loud        Shout the greeting loudly
+  -h, --help        Print help
 
 ```
 
