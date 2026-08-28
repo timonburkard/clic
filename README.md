@@ -20,7 +20,7 @@ An application defines commands and their arguments. Name arrays must end with `
 
 ```c
 static const char* const cmd_hello_names[]  = {"hello", NULL};
-static const char* const cmd_bye_names[]    = {"hello", NULL};
+static const char* const cmd_bye_names[]    = {"bye", NULL};
 static const char* const arg_number_names[] = {"-n", "--number", NULL};
 
 static const clic_arg_t arguments[] = {
