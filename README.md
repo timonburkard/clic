@@ -90,38 +90,37 @@ The callback function receives a `clic_res_t`. Its `argv` entries use the same i
 
 Help output for the example program:
 
-```sh
+<pre>
 > greet --help
 Simple program to greet someone
 
-Usage: greet <COMMAND>
+<u>Usage:</u> greet &lt;COMMAND&gt;
 
-Commands:
+<u>Commands:</u>
   hello   Say hello
   bye     Say goodbye
 
-Options:
+<u>Options:</u>
   -h, --help     Print help
   -V, --version  Print version
-```
+</pre>
 
 Help output for a specific command of the example program:
 
-```sh
+<pre>
 > greet hello --help
 Say hello
 
-Usage: greet hello <NAME> [OPTIONS]
+<u>Usage:</u> greet hello &lt;NAME&gt; [OPTIONS]
 
-Arguments:
-  <NAME>  Name to greet
+<u>Arguments:</u>
+  &lt;NAME&gt;  Name to greet
 
-Options:
-  -n, --number <N>  Number of greetings
+<u>Options:</u>
+  -n, --number &lt;N&gt;  Number of greetings
   -l, --loud        Shout the greeting loudly
   -h, --help        Print help
-
-```
+</pre>
 
 ## Argument types
 
