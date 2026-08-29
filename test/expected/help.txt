@@ -1,11 +1,11 @@
 Simple program to greet someone
 
-Usage: greet <COMMAND>
+<ESC>[4mUsage:<ESC>[24m greet <COMMAND>
 
-Commands:
+<ESC>[4mCommands:<ESC>[24m
   hello     Say hello
   bye     Say goodbye
 
-Options:
+<ESC>[4mOptions:<ESC>[24m
   -h, --help     Print help
   -V, --version  Print version

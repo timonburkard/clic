@@ -33,7 +33,7 @@ string(REPLACE "\r\n" "\n" actual_output "${actual_output}")
 string(REPLACE "\r\n" "\n" expected_output "${expected_output}")
 
 string(ASCII 27 escape)
-string(REGEX REPLACE "${escape}\\[[0-9;]*m" "" actual_output "${actual_output}")
+string(REPLACE "${escape}" "<ESC>" actual_output "${actual_output}")
 
 if(NOT actual_exit EQUAL EXPECTED_EXIT)
     message(FATAL_ERROR

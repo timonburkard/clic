@@ -1,11 +1,11 @@
 Say hello
 
-Usage: greet hello <NAME> [OPTIONS]
+<ESC>[4mUsage:<ESC>[24m greet hello <NAME> [OPTIONS]
 
-Arguments:
+<ESC>[4mArguments:<ESC>[24m
   <NAME>  Name to greet
 
-Options:
+<ESC>[4mOptions:<ESC>[24m
       --number <N>  Number of greetings
       --loud  Shout the greeting loudly
   -h, --help        Print help
