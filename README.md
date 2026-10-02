@@ -22,6 +22,7 @@ An application defines commands and their arguments. Name arrays must end with `
 enum {
     ARG_ID_NAME = 0,
     ARG_ID_NUMBER,
+    ARG_ID_LOUD,
 };
 
 static const char* const cmd_hello_names[]  = {"hello", NULL};
